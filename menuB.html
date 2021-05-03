@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<style type="text/css">
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+html,body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: arial;
+}
+body{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.balloon{
+  height: 50px;
+  width: 55px;
+  background-color: crimson;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  border-radius: 50%; 
+  animation: move 2s ease-in infinite;
+}
+.balloon:before{
+  content: "";
+  height: 6;
+  width: 6px;
+  position: absolute;
+  background-color: white;
+  top:93%;
+  left: 40%;
+  
+
+}
+@keyframes move{
+  0%{
+    top:0%;
+  }
+  100%{
+    top:100%;
+  }
+}
+.balloon:nth-child(2){
+  left: 20%;
+  top: 40%;
+  background-color: purple;
+  animation-duration: 3s;
+}
+.balloon:nth-child(3){
+  left: 60%;
+  top: 40%;
+  background-color: yellow;
+  animation-duration: 4s;
+}
+.balloon:nth-child(4){
+  left: 40%;
+  top: 40%;
+  background-color: orange;
+  animation-duration: 5s;
+}
+.balloon:nth-child(5){
+  left: 30%;
+  top: 40%;
+  background-color: lightblue;
+  animation-duration: 2s;
+}
+.balloon:nth-child(6){
+  left: 80%;
+  top: 40%;
+  background-color: lightblue;
+  animation-duration: 3s;
+}
+.balloon:nth-child(7){
+  left: 20%;
+  top: 40%;
+  background-color: lightpink;
+  animation-duration: 7s;
+}
+.balloon:nth-child(8){
+  left: 80%;
+  top: 40%;
+  background-color: grey;
+  animation-duration: 5s;
+}
+.balloon:nth-child(9){
+  left: 90%;
+  top: 40%;
+  background-color: purple;
+  animation-duration: 6s;
+}
+.balloon:nth-child(10){
+  left: 20%;
+  top: 40%;
+  background-color: yellow;
+  animation-duration: 5s;
+}
+
+h2{
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+div.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.block{
+  width: 80vw;
+  height: 85%;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.3); /* Black w/opacity/see-through */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.boxes{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+div.nav a{
+  box-shadow:inset -14px 15px 13px -3px #ffffff;
+  background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color:#ededed;
+  border-radius:35px;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  cursor:pointer;
+  color:#777777;
+  font-family:Arial;
+  font-size:22px;
+  font-weight:bold;
+  padding:10px 44px;
+  text-decoration:none;
+  text-shadow:-5px -2px 17px #ffffff;
+  border-radius: 20px;
+  outline: none;
+
+}
+div.nav a:hover {
+  background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color:#dfdfdf;
+}
+div.nav a:active {
+  position:relative;
+  top:1px;
+}
+div .pic{
+  height: 20px;
+  width: 20px;
+  margin: auto;
+}
+
+@media  screen and (max-width: 600px) {
+  div.nav{
+    width: 90%;
+    height: 10%;
+  }
+  div.boxes{
+    width: 90%;
+    height: 100%;
+  }
+  div.nav a{
+    font-size: 22px;
+    padding:10px 15px;
+  }
+}
+</style>
+
+
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+
+    <link rel="stylesheet" href="master.css">
+    <script type="text/javascript" src="main.js">
+
+      // var isVisible = document.getElementById("yourID").style.display == "block";
+// var isHidden = document.getElementById("yourID").style.display == "none";
+function rsvp() {
+  // show the rsvp box then close invitation box
+  if (document.getElementById('inv_box').style.display=="block" && document.getElementById('rs_box').style.display=="none"){
+    document.getElementById('inv_box').style.display='none';
+    document.getElementById('rs_box').style.display='block';
+  }
+}
+function invitation() {
+  // close the rsvp box then show invitation box
+  if (document.getElementById('rs_box').style.display=="block" && document.getElementById('inv_box').style.display=="none"){
+    document.getElementById('rs_box').style.display='none';
+    document.getElementById('inv_box').style.display='block';
+  }
+}
+    </script>
+  </head>
+  <body>
+  <!--   <h2>Cards</h2> -->
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <div class="container">
+      <div class="block">
+        <div class="boxes">
+          <div class="invitation_box" id="inv_box" style="display: block;">
+            <div class="title_invitation">
+        <div class="nav">
+          <p style="text-align: center;">Choose your Cooperate Template</p>
+          <a href="./TEMPLATECOOPERATE1.html" target="_self" > INVITATION TYPE 1 </a>
+            <a href="./TEMPLATECOOPERATE2.html" target="_self"> INVITATION TYPE 2 </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

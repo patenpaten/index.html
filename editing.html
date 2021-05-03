@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Tangerine">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Emilys+Candy&family=Faster+One&family=Freckle+Face&family=Fredericka+the+Great&family=Homemade+Apple&family=New+Rocker&family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <title></title>
+  <script type="text/javascript">
+
+    function clickForm()
+    {
+      var firstname = document.getElementById("firstname");
+      var lastname = document.getElementById("lastname");
+      var company = document.getElementById("comp");
+      var quote = document.getElementById("quote");
+      fname.innerHTML = " " + firstname.value;
+      rname.innerHTML = " " + lastname.value;
+      hname.innerHTML = "" + quote.value;
+      lname.innerHTML = " " + company.value;
+
+    } 
+    function save() 
+    {
+      var firstname = document.getElementById("firstname");
+      var lastname = document.getElementById("lastname");
+      var company = document.getElementById("comp");
+      var quote = document.getElementById("quote");
+      localStorage.setItem("firstname", firstname.value);
+      localStorage.setItem("lastname", lastname.value);
+      localStorage.setItem("comp", company.value);
+
+    }
+    function load()
+    {
+      var firstname = document.getElementById("firstname");
+      var lastname = document.getElementById("lastname");
+      var company = document.getElementById("comp");
+      var phone = document.getElementById("phone");
+      firstname.value = localStorage.getItem("firstname");
+      lastname.value = localStorage.getItem("lastname");
+      company.value = localStorage.getItem("comp");
+      
+      fname.innerHTML = "" + firstname.value + "&nbsp" + lastname.value ;
+      lname.innerHTML = " " + comp.value;
+      hname.innerHTML = "";
+      mail.innerHTML = "&nbsp &nbspEmail : " + email.value + " &nbsp No. : " ;
+    }
+    function fontChange(info)
+    {
+      var fname = document.getElementById("fname");
+      var lname = document.getElementById("lname");
+      var mail = document.getElementById("mail");
+      if (info == 1)
+      {
+        fname.style.fontFamily="Faster One";
+        rname.style.fontFamily="Faster One";
+        hname.style.fontFamily="Faster One";
+        lname.style.fontFamily="Faster One";
+      }
+      else
+      {
+        if (info == 2)
+        {
+          fname.style.fontFamily="Freckle Face";
+          rname.style.fontFamily="Freckle Face";
+          hname.style.fontFamily="Freckle Face";
+          lname.style.fontFamily="Freckle Face";
+        }
+        else
+        {
+          if (info == 3) 
+          {
+            fname.style.fontFamily="New Rocker";
+            rname.style.fontFamily="New Rocker";
+            hname.style.fontFamily="New Rocker";
+            lname.style.fontFamily="New Rocker";
+          }
+          else
+          {
+            if (info == 4) 
+            {
+              fname.style.fontFamily="Emilys Candy";
+              rname.style.fontFamily="Emilys Candy";
+              hname.style.fontFamily="Emilys Candy";
+              lname.style.fontFamily="Emilys Candy";
+            }
+          }
+        }
+      }
+    }
+    function bgcolor()
+    {
+      var card = document.getElementById("card");
+      var bgcolor = document.getElementById("bgcolor");
+      card.style.backgroundColor = bgcolor.value;
+    }
+    function bordcolor()
+    {
+      var card = document.getElementById("card");
+      var bordcolor = document.getElementById("bordcolor");
+      card.style.borderColor = bordcolor.value;
+    }
+
+    function allowDrop(ev){
+      ev.preventDefault();
+    }
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+  </script>
+  <style type="text/css">
+
+    body
+    {
+      margin: 0px;
+     /*background-color: lightblue;*/
+     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(imges/party.jpg);
+      display: grid;
+      grid-template-columns: 5vw 20vw 15fr 10fr;
+      grid-template-rows: 10vh 90vh ;
+      grid-template-areas:
+      "header header header home" 
+      "nav0 card card nav1";
+    }
+
+
+    .size1
+    {
+      width: 30px;
+    }
+    #home
+    {
+      grid-area: home;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+/*    #nav0{
+      grid-area: nav0;
+      background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(imges/party.jpg);
+ /*   background-color: lightblue;*/
+
+    /*}**/
+
+    #nav0 ul{
+      margin: 8px;
+    }
+    #nav1{
+      align-items: center;
+      grid-area: nav1;
+   
+    }
+
+    .contentCard{
+      display: flex;
+      justify-content: center;            
+      align-items: center;
+      background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(imges/party.jpg);
+      grid-area: card;
+    }
+
+    #card{
+      width: 400px;
+      height: 600px;
+      border: 1px solid black;
+      border-radius: 10px;
+      background-color: white;
+      border:2px solid;
+      padding: 10px;
+    }
+    nav ul{
+      list-style: none;
+      border: 2px solid red; 
+    }
+    .out
+    {
+      font-size: 2em;
+    }
+    #rname
+    {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    #mail
+    {
+      font-size: 1em;
+    }
+    .fav
+    {
+      width: 8em;
+      height: 2em;
+      margin-right: 50px;
+      margin-left: 32px;
+    }
+    #fname
+    {
+      text-align: center;
+      font-size: 3.5em;
+    }
+    #lname 
+    {
+      font-weight: bold;
+      font-size: 1em;
+    }
+    #hname
+    {
+      text-align: center;
+      font-size: 2em;
+      word-spacing: 10px;
+    }
+     .home{
+      list-style: none;
+      margin: auto;align-items: center;
+    }
+    .border{
+      position: absolute;
+      z-index: -10;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body onchange="clickForm()">
+  <div id="nav1" >
+    <br>
+    <br>
+    <label class="one">Greeting:</label>
+    <input type="text" name="firstname" id="firstname" class="two">
+    <br>
+    <br>
+    <label class="one">Date: </label>
+    <input type="date" name="lastname" id="lastname" class="two">
+    <br>
+    <br>  
+    <label class="one">Time:</label>
+    <input type="Time" name="company" id="comp">
+    <br>
+    <br>
+    <label class="one">Place:</label>
+    <input type="text" name="company" id="quote">
+    <br>
+    <br>
+    <br>
+    <label>Font Style</label>
+    <select onchange="fontChange(this.value)">
+      <option value="0">Default font</option>
+      <option value="1">Faster One</option>
+      <option value="2">Freckle Face</option>
+      <option value="3">New Rocker</option>
+      <option value="4">Emilys Candy</option>
+    </select>
+    <br>
+    <br>
+    <label>Background Color</label>
+    <input type="Color" name="bgcolor" onchange="bgcolor()" id="bgcolor">
+    <br>
+    <br>
+    <label>Border Color</label>
+    <input type="Color" name="bordcolor" onchange="bordcolor()" id="bordcolor">
+      <br>
+    <br>
+    <br>
+     <label class="one">Edit your card:</label>
+    <div>
+      <img id="drag1" src="imges/psd2.png" draggable="true" ondragstart="drag(event)" width="70" height="100">
+      <img id="drag1" src="imges/psd3.png" draggable="true" ondragstart="drag(event)" width="70" height="100">
+      <img id="drag1" src="imges/psd4.png" draggable="true" ondragstart="drag(event)" width="70" height="100">
+    </div>
+    <br>
+    <br>
+    <div>
+    <p>Save your work, reset and the load them</p>
+  <button id="savetofav">Save to Favourite</button>
+    <button id="load">Load</button>
+    <button id="reset">Reset</button>
+  
+</div>     
+  </div>
+
+  <script type="text/javascript">
+    var content = document.getElementById('contentCard'),
+    saveButton = document.getElementById('savetofav'),
+    loadButton = document.getElementById('load'),
+    resetButton = document.getElementById('reset');
+
+    var localStore = {
+  saveLocalStorage: function() {
+    localStorage.setItem('item', content.innerHTML);
+  },
+  loadLocalStorage: function() {
+    var contentStored = localStorage.getItem('item');
+    if ( contentStored ) {
+      content.innerHTML = contentStored;
+    } 
+  },
+  clearLocalStorage: function() {
+    localStorage.removeItem('item');
+  }
+};
+
+saveButton.addEventListener('click', function() {
+  localStore.saveLocalStorage();
+}, false);
+
+loadButton.addEventListener('click', function() {
+  localStore.loadLocalStorage();
+}, false);
+
+
+resetButton.addEventListener('click', function() {
+  content.innerHTML = 'Reset content to this. Try Load now.';
+}, false);  
+
+</script>
+
+
+  <div class="contentCard"ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="card" >
+      <div id="fname" class="out"></div>
+      <br>
+      <br>
+      <br>
+      <div id="rname" class="kname"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="hname" class="kname"></div>
+      <br>
+      <br>
+      <br>  
+      <br>
+      <br>
+      <div id="lname" class="out"></div>
+    </div>
+  </div>
+  <button class="home"><a href="homeA.html">Home</button>
+</body>
+</html>
+

@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Tangerine">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Emilys+Candy&family=Faster+One&family=Freckle+Face&family=Fredericka+the+Great&family=Homemade+Apple&family=New+Rocker&family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <title></title>
+  <script type="text/javascript">
+
+    function clickForm()
+    {
+      var dear = document.getElementById("dear").value;
+      var firstname = document.getElementById("firstname");
+      var lastname = document.getElementById("lastname");
+      var company = document.getElementById("comp");
+      var quote = document.getElementById("quote");
+      fname.innerHTML = " " + firstname.value;
+      rname.innerHTML = " " + lastname.value;
+      hname.innerHTML = "" + quote.value;
+      lname.innerHTML = " " + company.value;
+      document.getElementById("dear-text").textContent = dear;
+
+      return false;
+
+    }
+    function save()
+    {
+      var firstname = document.getElementById("firstname");
+      var lastname = document.getElementById("lastname");
+      var company = document.getElementById("comp");
+      var quote = document.getElementById("quote");
+      localStorage.setItem("firstname", firstname.value);
+      localStorage.setItem("lastname", lastname.value);
+      localStorage.setItem("comp", company.value);
+
+    }
+    function load()
+    {
+      var firstname = document.getElementById("firstname");
+      var lastname = document.getElementById("lastname");
+      var company = document.getElementById("comp");
+      var phone = document.getElementById("phone");
+      firstname.value = localStorage.getItem("firstname");
+      lastname.value = localStorage.getItem("lastname");
+      company.value = localStorage.getItem("comp");
+
+      fname.innerHTML = "" + firstname.value + "&nbsp" + lastname.value ;
+      lname.innerHTML = " " + comp.value;
+      hname.innerHTML = "";
+      mail.innerHTML = "&nbsp &nbspEmail : " + email.value + " &nbsp No. : " ;
+    }
+    function fontChange(info)
+    {
+      var fname = document.getElementById("fname");
+      var lname = document.getElementById("lname");
+      var mail = document.getElementById("mail");
+      if (info == 1)
+      {
+        fname.style.fontFamily="Fredericka the Great";
+        rname.style.fontFamily="Fredericka the Great";
+        hname.style.fontFamily="Fredericka the Great";
+        lname.style.fontFamily="Fredericka the Great";
+      }
+      else
+      {
+        if (info == 2)
+        {
+          fname.style.fontFamily="New Rocker";
+          rname.style.fontFamily="New Rocker";
+          hname.style.fontFamily="New Rocker";
+          lname.style.fontFamily="New Rocker";
+        }
+        else
+        {
+          if (info == 3)
+          {
+            fname.style.fontFamily="Lora";
+            rname.style.fontFamily="Lora";
+            hname.style.fontFamily="Lora";
+            lname.style.fontFamily="Lora";
+          }
+          else
+          {
+            if (info == 4)
+            {
+              fname.style.fontFamily="Reenie Beanie";
+              rname.style.fontFamily="Reenie Beanie";
+              hname.style.fontFamily="Reenie Beanie";
+              lname.style.fontFamily="Reenie Beanie";
+            }
+          }
+        }
+      }
+    }
+
+    function bordcolor()
+    {
+      var card = document.getElementById("card");
+      var bordcolor = document.getElementById("bordcolor");
+      card.style.borderColor = bordcolor.value;
+    }
+
+    function allowDrop(ev){
+      ev.preventDefault();
+    }
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+  </script>
+  <style type="text/css">
+
+    body
+    {
+      margin: 0px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(party.jpg);
+      display: grid;
+      grid-template-columns: 5vw 20vw 15fr 10fr;
+      grid-template-rows: 10vh 90vh ;
+      grid-template-areas:
+      "header header header home"
+      "nav0 card card nav1";
+    }
+
+
+    .size1
+    {
+      width: 30px;
+    }
+    #home
+    {
+      grid-area: home;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    #nav0{
+      grid-area: nav0;
+      background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(party.jpg);
+    }
+    #nav0 ul{
+      margin: 8px;
+    }
+    #nav1{
+      align-items: center;
+      grid-area: nav1;
+
+    }
+    #contentCard{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(party.jpg);
+      grid-area: card;
+    }
+    #card{
+      width: 400px;
+      height: 600px;
+      border: 1px solid black;
+      border-radius: 10px;
+     background-image: url('backgroundA.jpg');
+      border:2px solid;
+      padding: 10px;
+    }
+    nav ul{
+      list-style: none;
+      border: 2px solid red;
+    }
+    .out
+    {
+      font-size: 2em;
+    }
+    #rname
+    {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    #mail
+    {
+      font-size: 1em;
+    }
+    .fav
+    {
+      width: 8em;
+      height: 2em;
+      margin-right: 50px;
+      margin-left: 32px;
+    }
+    #fname
+    {
+      text-align: center;
+      font-size: 3.5em;
+    }
+    #lname
+    {
+      font-weight: bold;
+      font-size: 1em;
+    }
+    #hname
+    {
+      text-align: center;
+      font-size: 2em;
+      word-spacing: 10px;
+    }
+     .home{
+      list-style: none;
+      margin: auto;align-items: center;
+    }
+    .border{
+      position: absolute;
+      z-index: -10;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body onchange="clickForm()">
+  <nav id="nav1" >
+      <label>Pronouns</label>
+  <select id="dear">
+    <option>Mr</option>
+    <option>Mrs</option>
+    <option>Sir</option>
+    <option>Madam</option>
+  </select>
+    <br>
+    <br>
+    <label class="one">Greeting:</label>
+    <input type="text" name="firstname" id="firstname" class="two">
+    <br>
+    <br>
+    <label></label>
+    <label class="one">To </label>
+    <input type="text" name="lastname" id="lastname" class="two">
+    <br>
+    <br>  
+    <label class="one">From</label>
+    <input type="text" name="company" id="comp">
+    <br>
+    <br>
+    <label class="one">Quote</label>
+    <input type="text" name="company" id="quote">
+    <br>
+    <br>
+    <br>
+    <label>Font Style</label>
+    <select onchange="fontChange(this.value)">
+      <option value="0">Default font</option>
+      <option value="1">Fredericka the Great</option>
+      <option value="2">New Rocker</option>
+      <option value="3">Lora</option>
+      <option value="4">Reenie Beanie</option>
+    </select>
+    <br>
+    <br>
+    <label>Border Color</label>
+    <input type="Color" name="bordcolor" onchange="bordcolor()" id="bordcolor">
+      <br>
+    <br>
+    <br>
+     <label class="one">Edit your card:</label>
+    <div>
+      <img id="drag1" src="psd2.png" draggable="true" ondragstart="drag(event)" width="70" height="100">
+      <img id="drag1" src="psd3.png" draggable="true" ondragstart="drag(event)" width="70" height="100">
+      <img id="drag1" src="psd4.png" draggable="true" ondragstart="drag(event)" width="70" height="100">
+    </div>
+    <br>
+    <br>
+    <p>Save your work, reset and the load them</p>
+    <button onclick="save()" class="fav">Save to favourite </button>
+    <button onclick="load()" class="fav">Load</button>
+
+  </nav>
+
+  <div id="contentCard"ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="card" >
+      <div id="dear-text"></div>
+      <br>
+      <div id="fname" class="out"></div>
+      <br>
+      <br>
+      <br>
+      <div id="rname" class="kname"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="hname" class="kname"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="lname" class="out"></div>
+    </div>
+  </div>
+ <button class="home"><a href="index.html">Home</button>
+</body>
+</html>

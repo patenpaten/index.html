@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Perkahwinan</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<link rel="stylesheet" href="colorpick.css">
+
+	<style type="text/css">
+		#div1{
+			display: inline-block;
+			float: left; 
+			background-color: white;
+			width: 30%;
+			height: 600px;
+			padding: 10px; 
+			align-items: center;
+			border-radius: 8px;
+			text-align: center;
+
+			
+		}
+		.one, .two , .three  {
+
+		font-family: "Sofia", sans-serif;
+			color: black;
+			font-size: 1em;
+			float: front
+		}
+
+		.three {
+			font-size: 2em;
+
+		}
+
+		.four, .six , .seven {
+			font-family: "Times New Roman", Times, serif;
+		}
+
+		.droptarget , .pictext ,  {
+  		float: left; 
+ 		 margin: 10px;
+ 		 padding: 10px;
+ 		 border: 1px solid black;
+			height: 150px;
+			width: 150px;
+			padding: 4px; 
+			align-content: center;
+			border-radius: 5px;
+}
+
+		.div > .pic {
+			border: 1px solid black;
+			height: 200px;
+			width: 200px;
+			align-items: center;
+
+		}
+
+		.daripada{
+			float: left;
+			background-color: lightblue;
+			height: 40px;
+		}
+
+		.kepada{
+			float: right;
+			background-color: lightblue;
+			height: 40px;
+		}
+
+		.mesej {
+			float: bottom;
+		}
+
+		@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .div1, .droptarget , .box , .boxbox , .boxfortarget , .mesejbox{
+    width: 80%;
+    padding: 0;
+  }
+  ..div1, .droptarget , .box , .boxbox , .boxfortarget , .mesejbox{
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  ..div1, .droptarget , .box , .boxbox , .boxfortarget , .mesejbox {
+    width: 100%;
+  }
+}
+
+.container1{
+			width: 100%;
+			height: 100vh;
+			background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(imges/party.jpg);
+				background-position: center;
+				background-size: cover;
+				padding-left: 8%;
+				padding-right: 8%;
+				box-sizing: border-box;
+		}
+		.navbar{
+			height: 12%;
+			display: flex;
+			align-items: center;
+		}
+		.logo{
+			width: 50px;
+
+		cursor: pointer;
+		}
+		.menu{
+			width: 30px;
+			cursor: pointer;
+			mask-type: 40px;
+		}
+		nav{
+			flex:1;
+			text-align: right;
+		}
+		nav ul li{
+			list-style: none;
+			display: inline-block;
+			margin-left: 60px;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 13px;
+		}
+
+		.boxfortarget{
+			
+			width: 30%;
+			height: 600px;
+			text-align: center;
+			border-radius:10px;
+			background-color: grey;
+			float: right;
+			padding: 20px;
+			
+
+		}
+		
+		.boxbox{
+
+			width: 150px;
+			height: 150px;
+			border-radius: 8px;
+			border-color: black;
+			border-style: solid;
+			margin: auto;
+			background-color: grey;
+			
+
+		}
+
+		.mesejbox{
+			background-color: grey;
+			width: 200px;
+			height: 60px;
+			border-radius: 2px;
+			border-color: black;
+			border-style: solid;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container1">
+	<div class="navbar">
+		<button><a href="index.html">Home</button></a>
+	
+	</div>
+
+	
+
+<div id="div1">
+	<div class="kepada" draggable="true" class="dragtarget">Kepada:</div>
+	
+	<div class="daripada" draggable="true" class="dragtarget">Daripada:</div>
+	<div class="one">Awda Dijemput Hadir Ke</div>
+	<div class="two">Walimatul Urus</div>
+	<div class="three" contenteditable="true" ondragenter="event.preventDefault(); event.dataTransfer.dropEffect = 'none'" ondragover="event.preventDefault(); event.dataTransfer.dropEffect = 'none'" onfocus="this.value=''" value='ADAM & HAWA'>ADAM & HAWA</div>
+	<div class="four" contenteditable="true" ondragenter="event.preventDefault(); event.dataTransfer.dropEffect = 'none'" ondragover="event.preventDefault(); event.dataTransfer.dropEffect = 'none'">11HB Muharram 1443H | 19HB Ogos 2021M</div>
+	<div class="five" contenteditable="true" ondragenter="event.preventDefault(); event.dataTransfer.dropEffect = 'none'" ondragover="event.preventDefault(); event.dataTransfer.dropEffect = 'none'">LOCATION</div>
+	
+	<div class="mesej" draggable="true" class="dragtarget">Mesej Ringkas:</div>
+	<div class="mesejbox"></div>
+	<div class="pic" class="droptarget"></div>
+	<p>Drop the picture here</p>
+	<div class="boxbox"></div>
+	</div>
+
+	<div class="boxfortarget">
+		<h3>1)Drop the picture</h3>
+	<div class="droptarget"><img src="weddingpic.jpeg" width="150" height="150" draggable="true" id="dragtarget"></div>
+	
+
+	<div id="box">
+		<h3>2)Try editing the text on the card</h3>
+		<h3>3)Drag and Drop the texts</h3>
+		<div></div>
+	<div id="result1" draggable="true" id="dragtarget"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Adam");
+  // Retrieve
+  document.getElementById("result1").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result1").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+
+<div id="result2" draggable="true" id="dragtarget"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Nur");
+  // Retrieve
+  document.getElementById("result2").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result2").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+
+<div id="result3" draggable="true" id="dragtarget"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("Congratulation", "Hubungi kami jika awda hadir kemajlis Perkahwinan kami! +673 87322992");
+  // Retrieve
+  document.getElementById("result3").innerHTML = localStorage.getItem("Congratulation");
+} else {
+  document.getElementById("result3").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("Greetings", "You are invited to our wedding");
+  // Retrieve
+  document.getElementById("result4").innerHTML = localStorage.getItem("Greetings");
+} else {
+  document.getElementById("result4").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+	
+	<div><h3>4)Try changing the background color for the card box color here!</h3>
+		<input type="Color" name="co" onchange="changeColor(this.value)">
+
+		
+	<div>
+		<p>Save your work, reset and the load them</p>
+	<button id="savetofav">Save to Favourite</button>
+    <button id="load">Load</button>
+    <button id="reset">Reset</button>
+  
+</div>  
+<script type="text/javascript">
+var content = document.getElementById('div1'),
+    saveButton = document.getElementById('savetofav'),
+    loadButton = document.getElementById('load'),
+    resetButton = document.getElementById('reset');
+var localStore = {
+  saveLocalStorage: function() {
+    localStorage.setItem('item', content.innerHTML);
+  },
+  loadLocalStorage: function() {
+    var contentStored = localStorage.getItem('item');
+    if ( contentStored ) {
+      content.innerHTML = contentStored;
+    } 
+  },
+  clearLocalStorage: function() {
+    localStorage.removeItem('item');
+  }
+};
+
+saveButton.addEventListener('click', function() {
+  localStore.saveLocalStorage();
+}, false);
+
+loadButton.addEventListener('click', function() {
+  localStore.loadLocalStorage();
+}, false);
+
+
+resetButton.addEventListener('click', function() {
+  content.innerHTML = 'Reset content to this. Try Load now.';
+}, false);	
+
+</script>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+	<script>
+
+
+		function changeColor(color){
+		document.getElementById('div1').style.backgroundColor=color;
+	}	
+
+/* Event fired on the drag target */
+document.addEventListener("dragstart", function(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+  document.getElementById("demo").innerHTML = "Started to drag the p element.";
+});
+
+/* Events fired on the drop target */
+document.addEventListener("dragover", function(event) {
+  event.preventDefault();
+});
+
+document.addEventListener("drop", function(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The p element was dropped";
+});
+</script>
+
+</div>
+
+</body>
+</html>

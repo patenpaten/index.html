@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<title></title>
+	<style type="text/css">
+
+		/*references : https://youtu.be/0a9LTDR9ugU*/
+
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Roboto', san-serif;
+			box-sizing: border-box;
+		}
+
+		.container{
+			width: 100%;
+			height: 250vh;
+			background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(party.jpg);
+				background-position: center;
+				background-size: cover;
+				padding-left: 8%;
+				padding-right: 8%;
+				box-sizing: border-box;
+		}
+		.navbar{
+			height: 12%;
+			display: flex;
+			align-items: center;
+		}
+		.logo{
+			width: 50px;
+		    cursor: pointer;
+		}
+		.menu{
+			width: 30px;
+			cursor: pointer;
+			mask-type: 40px;
+		}
+		nav{
+			flex:1;
+			text-align: right;
+		}
+		nav ul li{
+			list-style: none;
+			display: inline-block;
+			margin-left: 50px;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 13px;
+		}
+		.row{
+			display: flex;
+			height: 88%;
+			align-items: center;
+		}
+		.col{
+			flex-basis: 50%;
+			grid-area: item;
+
+		}
+		h1{
+			color: #fff;
+			font-size: 100px;
+		}
+		p{
+			color: black;
+			font-size: 11px;
+			line-height: 15px;
+		}
+		button{
+			width: 180px;
+			color: #000;
+			font-size: 12px;
+			padding: 12px 0;
+			background:white;
+			border:0;
+			border-radius: 20px;
+			outline: none;
+			margin-top: 30px;
+		}
+		.card{
+			width: 200px;
+			height: 230px;
+			display: inline-block;
+			border-radius: 10px;
+			padding: 15px 25px;
+			box-sizing: border-box;
+			cursor: pointer;
+			margin: 10px 15px;
+			
+			background-position: center;
+			background-size: cover; 
+			transition: transform 0.5s;
+		}
+		.card1{
+        background-image: url(happybday.jpg);
+		}
+		.card2{
+			background-image: url(HB.png);
+		}
+		.card3{
+        background-image: url(wedding.jpg);
+		}
+		.card4{
+        background-image: url(cop.jpg);
+		}
+
+		.card:hover{
+			transform: translateY(-10px);
+		}
+
+		.sci{
+			position: absolute;
+			top: 50%;
+			right: 30px;
+			transform: translateY(-50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.sci li{
+			list-style: none;
+		}
+		.sci li a{
+			display: inline-block;
+			margin: 5px 0;
+			transform: scale(0.6);
+			filter: invert(1);
+		}
+		/*for phone*/
+/*		[class*="container"]{
+			width: 100%;
+			float: left;
+		}*/
+        /*for tablet*/
+		@media  screen and (min-width: 600px) {
+			*col-s-1{width: 8%;}
+			*col-s-2{width: 16%;}
+			*col-s-3{width: 25%;}
+			*col-s-4{width: 33%;}
+			*col-s-5{width: 50%;}
+			*col-s-6{width: 62%;}
+			*col-s-7{width: 67%;}
+			*col-s-8{width: 89%;}
+			*col-s-9{width: 91%;}
+			*col-s-10{width: 100%;}
+}
+		}
+	</style>
+	<link rel="stylesheet" >
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container col-xs-12 col-sm-8" >
+	<div class="navbar col-xs-12 col-sm-8">
+		<img src="menu.png" class="logo"><h3>Home</h3>
+		<nav>
+			<ul>
+				<li><a href="fully customize template 1.html">Customize your own</li>
+				<li><a href="menuC.html">formal</a></li>
+				<li><a href="menuB.html">coperate</a></li>
+				<li><a href="menuA.html" target="_self" >informal</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="row col-xs-12 ">
+		<div class="col col-xs-12 ">
+			<h1>LET'S START </h1>
+			<p>Create you very own cards here on our website. So much design is there. Lorem ipsum dolor sit amet, 
+		    consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur.</p>
+			<button type="button"><i> Favourite</i> </button>
+		</div>
+<br>
+<br>
+		<div class="col col-xs-12" id="item">
+			<div class="card card1 col-xs-12 " >
+				<h5 >Informal </h5>
+				<p><i>Birthday Cards<i/></p>
+			</div>
+			<div class="card card3 col-xs-12 ">
+				<h5>Formal</h5>
+				<p><i>wedding cards<i/></p>
+			</div>
+			<div class="card card4 col-xs-12 ">
+				<h5>coperate </h5>
+				<p> <i>business cards</i></p>
+			</div>
+			<div class="card card2 col-xs-12 ">
+				<h5>Customize</h5>
+				<p><i>Your Own Cards</i></p>
+			</div>
+
+			<ul class="sci col-xs-12 ">
+		<li><a href="#"><img src="facebook.png"><a/></li>
+			<li><a href="#"><img src="instagram.png"><a/></li>
+				<li><a href="#"><img src="twitter.png"><a/></li>
+	</ul>
+	</div>
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap#5.0.0-beta3/dist/js/bootstrap.bundle.min.js" intergrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vl5DkLtS3qm9Ekf" crossorgin="anonymous"></script>
+</body>
+</html>
